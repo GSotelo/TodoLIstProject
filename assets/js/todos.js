@@ -1,6 +1,10 @@
+$('.fa-check').hide();
+
 $('ul').on("click", "li", function() {
 	$(this).toggleClass("completed");
+	$(this).children('.fa-check').toggle();
 });
+
 
 $("ul").on("click", "span", function(event) {
 	$(this).parent().fadeOut(500, function() {
