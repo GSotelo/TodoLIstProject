@@ -18,8 +18,9 @@ $("input[type='text']").keypress(function(event) {
 		//grab new todo text from input
 		var todoText = $(this).val();
 		//create a new li and add to ul
-		var liStart = "<li><span><i class='fa fa-trash'></i></span> ";
+		var liStart = "<li><span id='trash'><i class='fa fa-trash'></i></span><i class='fa fa-check'></i> ";
 		$("ul").append(liStart + todoText + "</li>");
+		$('.fa-check').hide();
 		$(this).val("");
 	}
 });
